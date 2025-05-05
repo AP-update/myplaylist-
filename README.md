@@ -2,7 +2,7 @@
 
 Sebuah halaman web sederhana yang menampilkan daftar musik dengan pemutar audio.
 
-[Lihat Demo](URL_DEMO_KAMU_DI_SINI)
+[Lihat Demo](https://myplaylist-demo.vercel.app)
 
 ## Fitur
 
