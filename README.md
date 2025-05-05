@@ -1,6 +1,6 @@
 # My Simple Music Playlist <i class="fa-solid fa-music"></i>
 
-Sebuah halaman web sederhana yang menampilkan daftar musik dengan pemutar audio. Dibuat menggunakan HTML, CSS Tailwind, dan Font Awesome.
+Sebuah halaman web sederhana yang menampilkan daftar musik dengan pemutar audio.
 
 [Lihat Demo](URL_DEMO_KAMU_DI_SINI)
 
@@ -13,13 +13,8 @@ Sebuah halaman web sederhana yang menampilkan daftar musik dengan pemutar audio.
 * **Ikon Sosial Media:** Tautan ke platform sosial media kamu.
 * **Mudah Diedit:** Struktur kode yang sederhana memudahkan penambahan, penghapusan, dan pengeditan konten.
 
-## Cara Menggunakan
 
-1.  **Unduh atau Klon Repository:**
-    ```bash
-    git clone [URL_REPOSITORY_KAMU]
-    ```
-2.  **Buka `index.html`:** Buka file `index.html` di browser web kamu.
+1.  **Buka `index.html`:** Buka file `index.html` di browser web kamu.
 
 ## Cara Mengedit Musik
 
@@ -58,11 +53,11 @@ Catbox.moe adalah layanan *file hosting* anonim yang bisa kamu gunakan untuk men
         ];
     ```
 
-    Ganti `"Nama Artis - Judul Lagu Baru"` dengan judul lagu yang sesuai dan `"https://files.catbox.moe/kodeunik.mp3"` dengan *direct link* yang kamu dapatkan dari Catbox.moe. Jangan lupa tambahkan koma di akhir objek sebelumnya jika ini bukan lagu pertama yang kamu tambahkan.
+    Ganti `"Nama Artis - Judul Lagu Baru"` dengan judul lagu yang sesuai dan `"https://files.catbox.moe/kodeunik.mp3"` dengan *direct link* yang kamu dapatkan dari Catbox.moe.
 
 ### Menghapus Musik
 
-Untuk menghapus lagu, cukup hapus objek (kurung kurawal `{}`) yang sesuai dengan lagu yang ingin kamu hilangkan dari array `songs`. Pastikan kamu juga menghapus tanda koma jika lagu yang dihapus bukan yang terakhir dalam daftar.
+Untuk menghapus lagu, cukup hapus objek (kurung kurawal `{}`) yang sesuai dengan lagu yang ingin kamu hilangkan dari array `songs`. 
 
 ### Mengganti Judul Musik
 
