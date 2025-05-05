@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>My Playlist ðŸŽ¶</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet" />
+  <style>
+    body {
+      background: linear-gradient(135deg, #0f172a 0%, #1e3a8a 100%);
+    }
+    .social-icons a:hover {
+      color: #1ed760; /* Spotify green */
+    }
+  </style>
+</head>
+<body class="text-white relative min-h-screen px-4 py-10">
+
+  <div class="text-center mb-10">
+    <h1 class="text-3xl font-bold drop-shadow-xl">My Playlist <i class="fa-solid fa-music"></i></h1>
+    <p class="text-sm text-gray-300 mb-4">(  halaman demo   )</p>
+    <div class="flex justify-center space-x-6 text-2xl text-gray-300 social-icons">
+      <a href="https://whatsapp.com/channel/0029VaalShkGZNCsXgFPO80A[LINKWA ATAU CH MU" class="text-green-500 hover:text-green-400 transition"><i class="fab fa-whatsapp"></i></a>
+      <a href="#LINK FBMU" class="text-blue-600 hover:text-blue-500 transition"><i class="fab fa-facebook"></i></a>
+      <a href="#LINK IGMU" class="text-pink-500 hover:text-pink-400 transition"><i class="fab fa-instagram"></i></a>
+      <a href="#LINK SPOTIFYMU" class="text-[#1ed760] hover:text-[#19b854] transition"><i class="fab fa-spotify"></i></a>
+    </div>
+  </div>
+
+  <div id="playlist" class="space-y-14"></div>
+
+  <footer class="text-center mt-10 text-gray-300">
+    <p>&copy; 2025 Dibuat oleh A&Z</p>
+  </footer>
+
+  <script>
+    const songs = [
+     { title: "judul lagu mu", url: "https://files.catbox.moe/.mp3 link lagumu" },
+     
+    { title: "judul lagu mu", url: "https://files.catbox.moe/.mp3 link lagu mu" },
+    
+   { title: "judul lagumu", url: "https://files.catbox.moe/0va0x3.mp3" },
+   
+   { title: "judul lagumu", url: "https://files.catbox.moe/.mp3" },
+                  
+    ];
+    
+    const grouped = {};
+    songs.forEach(song => {
+      const first = song.title[0].toUpperCase();
+      if (!grouped[first]) grouped[first] = [];
+      grouped[first].push(song);
+    });
+
+    const container = document.getElementById('playlist');
+
+    Object.keys(grouped).sort().forEach(letter => {
+      const section = document.createElement('div');
+      section.innerHTML = `<h2 class="text-3xl font-bold mb-6 text-white drop-shadow">${letter}</h2>`;
+      grouped[letter].forEach(song => {
+        section.innerHTML += `
+          <div class="bg-white/10 border border-white/20 p-6 rounded-xl shadow-sm hover:shadow-lg transition-all duration-300 mb-6">
+            <p class="text-base font-semibold mb-3">${song.title}</p>
+            <audio controls class="w-full rounded overflow-hidden">
+              <source src="${song.url}" type="audio/mpeg">
+              Browsermu tidak mendukung audio.
+            </audio>
+          </div>
+        `;
+      });
+      container.appendChild(section);
+    });
+  </script>
+</body>
+</html>
